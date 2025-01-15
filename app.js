@@ -18,7 +18,7 @@ myAwesomeFunction(function () {
   console.log("notifyUser function was called!");
 });
 
-function myAwesomeFunction(onSuccessCallback, onFailureCallback) {
+function myAwesomeFunction(onSuccessCallback, failureCallback) {
   console.log("Running myAwesomeFunction...doing complex tasks...");
   console.log("Complex task complete. I will notify the user");
 
@@ -28,7 +28,7 @@ function myAwesomeFunction(onSuccessCallback, onFailureCallback) {
       message: "This is the message of success",
     });
   } else {
-    onFailureCallback();
+    failureCallback();
   }
 }
 function onAwesomeSuccess(data) {
